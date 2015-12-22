@@ -51,7 +51,7 @@ Execute SQL query to initialize the `ping_aggregates` table:
 Start Rails server
 
 ```
-  RAILS_ENV=development rails s
+  RAILS_ENV=development bundle exec rails s
 ```
 
 Then go to the [splash page](http://localhost:3000).

@@ -1,2 +1,2 @@
-module PingHelper
+module PingsHelper
 end

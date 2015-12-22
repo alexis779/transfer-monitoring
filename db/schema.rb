@@ -34,6 +34,6 @@ ActiveRecord::Schema.define(version: 20151217063847) do
     t.integer  "status",              limit: 4
   end
 
-  add_index "pings", ["origin"], name: "index_pings_on_origin", using: :btree
+  add_index "pings", ["origin", "created_at"], name: "index_pings_on_origin_and_created_at", unique: true, using: :btree
 
 end

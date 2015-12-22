@@ -34,6 +34,7 @@ module Pings
 
       insert << "INSERT INTO pings(origin, name_lookup_time_ms, connect_time_ms, transfer_time_ms, total_time_ms, created_at, status) VALUES "
       insert << slice.map { |options|
+        options[:created_at] = options[:created_at][0..18]
         "('#{options[:origin]}', #{options[:name_lookup_time_ms]}, #{options[:connect_time_ms]}, #{options[:transfer_time_ms]}, #{options[:total_time_ms]}, '#{options[:created_at]}', #{options[:status]})"
       }.join(",\n")
       insert << ";\n"

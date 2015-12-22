@@ -10,7 +10,7 @@ class Ping < ActiveRecord::Migration
       t.integer :status
     end
 
-    add_index :pings, [:origin]
+    add_index :pings, [:origin, :created_at], unique: true
 
 
     create_table :ping_aggregates do |t|
